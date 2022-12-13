@@ -1,7 +1,6 @@
 /*
-湖南创乐博智能科技有限公司
-编辑：朱林
-日期：2020年1月11日
+Magic Code Education Center
+Makebit Robot Car
 */
 
 
@@ -73,16 +72,16 @@ namespace makerobo {
     }
     
      export enum enObstacle {
-        //% blockId="Obstacle" block="有障碍物"
+        //% blockId="Obstacle" block="Obstacle"
         Obstacle = 0,
-        //% blockId="NoObstacle" block="无障碍物"
+        //% blockId="NoObstacle" block="No Obstacle"
         NoObstacle = 1
     }
 
      export enum enflame {
-        //% blockId="Flame" block="发现火焰"
+        //% blockId="Flame" block="Flame"
         Flame = 0,
-        //% blockId="NoFlame" block="无火焰"
+        //% blockId="NoFlame" block="No Flame"
         NoFlame = 1
     }
 
@@ -161,7 +160,7 @@ namespace makerobo {
         pins.i2cWriteBuffer(PCA9685_ADDRESS, buf);
     }
 
-    //% blockId=robotbit_setLeveL block="控制声音传感器|%index|电平 %value"
+    //% blockId=robotbit_setLeveL block="Control Voice Sensor|%index|Level %value"
     //% weight=99
     //% blockGap=50
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -229,7 +228,7 @@ namespace makerobo {
      * @param index Servo Channel; eg: S1
      * @param degree [0-180] degree of servo; eg: 0, 90, 180
     */
-    //% blockId=robotbit_servo block="舵机|%index|角度 %degree"
+    //% blockId=robotbit_servo block="Servo|%index|Degree %degree"
     //% weight=100
     //% degree.min=0 degree.max=180
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -248,7 +247,7 @@ namespace makerobo {
      * @param index Servo Channel; eg: S1
      * @param degree [-45-225] degree of servo; eg: -45, 90, 225
     */
-    //% blockId=robotbit_gservo block="Geek Servo|%index|角度 %degree"
+    //% blockId=robotbit_gservo block="Geek Servo|%index|Degree %degree"
     //% weight=99
     //% blockGap=50
     //% degree.min=-45 degree.max=225
@@ -263,7 +262,7 @@ namespace makerobo {
         setPwm(index + 7, 0, value)
     }
     
-    //% blockId=robotbit_motor_run block="电机|%index|速度 %speed"
+    //% blockId=robotbit_motor_run block="Motor|%index|Speed %speed"
     //% weight=85
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -298,7 +297,7 @@ namespace makerobo {
      * @param motor2 Second Motor; eg: M2A, M2B
      * @param speed2 [-255-255] speed of motor; eg: 150, -150
     */
-    //% blockId=robotbit_motor_dual block="电机|%motor1|速度 %speed1|%motor2|速度 %speed2"
+    //% blockId=robotbit_motor_dual block="Motors|%motor1|Speed %speed1|%motor2|Speed %speed2"
     //% weight=84
     //% speed1.min=-255 speed1.max=255
     //% speed2.min=-255 speed2.max=255
@@ -314,7 +313,7 @@ namespace makerobo {
      * @param speed [-255-255] speed of motor; eg: 150, -150
      * @param delay seconde delay to stop; eg: 1
     */
-    //% blockId=robotbit_motor_rundelay block="电机|%index|速度 %speed|延时 %delay|s"
+    //% blockId=robotbit_motor_rundelay block="Motor|%index|Speed %speed|Delay %delay|s"
     //% weight=81
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -324,13 +323,13 @@ namespace makerobo {
         MotorRun(index, 0);
     }
 
-    //% blockId=robotbit_stop block="停止电机|%index|"
+    //% blockId=robotbit_stop block="Stop Motor|%index|"
     //% weight=80
     export function MotorStop(index: Motors): void {
         MotorRun(index, 0);
     }
 
-    //% blockId=robotbit_stop_all block="停止所有电机"
+    //% blockId=robotbit_stop_all block="Stop All Motors"
     //% weight=79
     //% blockGap=50
     export function MotorStopAll(): void {
@@ -342,7 +341,7 @@ namespace makerobo {
         }
     }
     
-    //% blockId=Microbit_Sensor_IR block="红外避障传感器|引脚 %pin|值 %value"
+    //% blockId=Microbit_Sensor_IR block="IR Sensor|Pin %pin|Value %value"
     //% weight=96
     //% blockGap=20
     //% color="#228B22"
@@ -352,7 +351,7 @@ namespace makerobo {
         return pins.digitalReadPin(pin) == value;
     }
 
-    //% blockId=Microbit_Sensor_flame block="火焰传感器|引脚 %pin|值 %value"
+    //% blockId=Microbit_Sensor_flame block="Flame Sensor|Pin %pin|Value %value"
     //% weight=97
     //% blockGap=20
     //% color="#228B22"
@@ -362,7 +361,7 @@ namespace makerobo {
         return pins.digitalReadPin(pin) == value;
     }  
     
-    //% blockId=Microbit_ping block="超声波模块|echo %echo|unit %unit"
+    //% blockId=Microbit_ping block="Ultrasonic Sensor|echo %echo|unit %unit"
     export function ping(echo: DigitalPin, unit: PingUnit, maxCmDistance = 500): number {
         
         setLevel(Servos.S3, false);

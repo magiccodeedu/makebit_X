@@ -11,7 +11,8 @@
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+        "_locales/zh-cn/makerobo-strings.json"
     ],
     "testFiles": [
         "test.ts"
