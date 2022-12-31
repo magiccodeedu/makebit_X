@@ -15,6 +15,6 @@
     "makerobo.enObstacle.Obstacle|block": "有障碍物",
     "makerobo.enObstacle.NoObstacle|block": "无障碍物",
     "makerobo.enflame.Flame|block": "发现火焰",
-    "makerobo.enflame.NoFlame|block": "无火焰",
+    "makerobo.enflame.NoFlame|block": "无火焰"
 
   }
