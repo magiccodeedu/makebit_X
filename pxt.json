@@ -6,7 +6,7 @@
     "dependencies": {
         "core": "*",
         "neopixel": "github:microsoft/pxt-neopixel#v0.6.9",
-        "cbit_IR": "github:magiccodeedu/cBit_IR",
+        "cbit_IR": "github:magiccodeedu/cBit_IR_V2",
         "TM1650": "github:magiccodeedu/TM1650"
     },
     "files": [
