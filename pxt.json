@@ -1,7 +1,7 @@
 {
     "name": "makebit",
     "version": "3.0",
-    "description": "Extension for Magic Robots micro:bit",
+    "description": "Extension for Magic Code Robots micro:bit",
     "license": "MIT",
     "dependencies": {
         "core": "*",
